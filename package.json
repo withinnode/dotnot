@@ -1,0 +1,35 @@
+{
+  "name": "@withinnode/dotnot",
+  "version": "1.0.0",
+  "description": "Dot notation getter and setter",
+  "type": "module",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint lib/ test/ bench/",
+    "test": "mocha test/index.js",
+    "coverage": "c8 --reporter=text npm test",
+    "bench": "node bench/get.js; echo; node bench/set.js",
+    "postinstall": "patch-package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/withinnode/dotnot.git"
+  },
+  "dependencies": {
+    "~": "file:./src",
+    "~test": "file:./test"
+  },
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "c8": "^8.0.0",
+    "dot-object": "^2.1.4",
+    "dot-prop": "^8.0.2",
+    "eslint": "^8.45.0",
+    "keypather": "^3.1.0",
+    "lodash.get": "^4.4.2",
+    "lodash.set": "^4.3.2",
+    "mocha": "^10.2.0",
+    "patch-package": "^7.0.2",
+    "resolve-dotstringkey": "^1.1.1"
+  }
+}

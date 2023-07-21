@@ -1,0 +1,22 @@
+diff --git a/node_modules/lodash.set/index.js b/node_modules/lodash.set/index.js
+index 9f3ed6b..e79abed 100644
+--- a/node_modules/lodash.set/index.js
++++ b/node_modules/lodash.set/index.js
+@@ -651,7 +651,7 @@ function isMasked(func) {
+  * @param {string} string The string to convert.
+  * @returns {Array} Returns the property path array.
+  */
+-var stringToPath = memoize(function(string) {
++var stringToPath = /*memoize(*/function(string) {
+   string = toString(string);
+ 
+   var result = [];
+@@ -662,7 +662,7 @@ var stringToPath = memoize(function(string) {
+     result.push(quote ? string.replace(reEscapeChar, '$1') : (number || match));
+   });
+   return result;
+-});
++}/*)*/;
+ 
+ /**
+  * Converts `value` to a string key if it's not a string or symbol.
