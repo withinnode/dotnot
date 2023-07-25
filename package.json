@@ -4,6 +4,7 @@
   "description": "Dot notation getter and setter",
   "type": "module",
   "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "lint": "eslint lib/ test/ bench/",
     "test": "mocha test/index.js",
