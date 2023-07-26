@@ -115,19 +115,21 @@ import { get, set } from 'dotnot';
 
 ```
 Benchmarking getters...
-dotnot/get x 1,625,263 ops/sec ±0.14% (96 runs sampled)
-lodash.get x 418,630 ops/sec ±0.09% (98 runs sampled)
-dot-prop/getProperty x 421,492 ops/sec ±0.18% (99 runs sampled)
-dot-object/pick x 526,311 ops/sec ±0.13% (97 runs sampled)
-resolve-dotstringkey x 373,315 ops/sec ±0.27% (99 runs sampled)
-keypather/get x 186,244 ops/sec ±0.27% (93 runs sampled)
+dotnot/get x 1,616,082 ops/sec ±0.17% (99 runs sampled)
+lodash.get x 414,361 ops/sec ±0.10% (98 runs sampled)
+dot-prop/getProperty x 385,361 ops/sec ±0.17% (98 runs sampled)
+dot-object/pick x 528,419 ops/sec ±0.09% (94 runs sampled)
+resolve-dotstringkey x 377,465 ops/sec ±0.37% (98 runs sampled)
+keypather/get x 185,867 ops/sec ±0.10% (97 runs sampled)
+mpath/get x 564,499 ops/sec ±0.14% (95 runs sampled)
 Fastest is dotnot/get
 
 Benchmarking setters...
-dotnot/set x 1,344,765 ops/sec ±0.24% (98 runs sampled)
-lodash.set x 357,735 ops/sec ±0.08% (99 runs sampled)
-dot-prop/SetProperty x 405,510 ops/sec ±0.25% (98 runs sampled)
-keypather/set x 165,898 ops/sec ±0.25% (98 runs sampled)
+dotnot/set x 1,338,293 ops/sec ±0.13% (97 runs sampled)
+lodash.set x 348,360 ops/sec ±0.43% (96 runs sampled)
+dot-prop/SetProperty x 408,039 ops/sec ±0.07% (99 runs sampled)
+keypather/set x 179,563 ops/sec ±0.33% (99 runs sampled)
+mpath/set x 546,170 ops/sec ±0.08% (95 runs sampled)
 Fastest is dotnot/set
 ```
 

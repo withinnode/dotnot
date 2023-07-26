@@ -8,6 +8,7 @@ import { getProperty as dotPropGetProperty } from 'dot-prop';
 import dotObject from 'dot-object';
 import resolveDotstringkey from 'resolve-dotstringkey';
 import keypatherGet from 'keypather/get.js';
+import mpath from 'mpath';
 import { get } from '../lib/index.js';
 
 const { Suite } = benchmark;
@@ -20,6 +21,7 @@ assertEqual(dotPropGetProperty(data, 'content.children[161].children[1].children
 assertEqual(dotObject.pick('content.children[161].children[1].children[5].properties.className[1]', data), 'footer');
 assertEqual(resolveDotstringkey(data, 'content.children[161].children[1].children[5].properties.className[1]'), 'footer');
 assertEqual(keypatherGet(data, 'content.children[161].children[1].children[5].properties.className[1]'), 'footer');
+assertEqual(mpath.get('content.children[161].children[1].children[5].properties.className[1]', data), 'footer');
 
 console.log('Benchmarking getters...');
 
@@ -41,6 +43,9 @@ new Suite()
   })
   .add('keypather/get', function () {
     keypatherGet(data, 'content.children[161].children[1].children[5].properties.className[1]');
+  })
+  .add('mpath/get', function () {
+    mpath.get('content.children[161].children[1].children[5].properties.className[1]', data);
   })
   .on('cycle', function (event) {
     console.log(String(event.target));

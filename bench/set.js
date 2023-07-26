@@ -6,6 +6,7 @@ import benchmark from 'benchmark';
 import lodashSet from 'lodash.set';
 import { setProperty as dotPropSetProperty } from 'dot-prop';
 import keypatherSet from 'keypather/set.js';
+import mpath from 'mpath';
 import { set } from '../lib/index.js';
 
 const { Suite } = benchmark;
@@ -33,6 +34,10 @@ const data4 = JSON.parse(dataStr);
 assertEqual(keypatherSet(data4, 'content.children[161].children[1].children[5].properties.className[1]', value), /*data4*/value); // eslint-disable-line spaced-comment
 assertEqual(data4.content.children[161].children[1].children[5].properties.className[1], value);
 
+const data5 = JSON.parse(dataStr);
+assertEqual(mpath.set('content.children[161].children[1].children[5].properties.className[1]', value, data5), /*data5*/undefined); // eslint-disable-line spaced-comment
+assertEqual(data5.content.children[161].children[1].children[5].properties.className[1], value);
+
 console.log('Benchmarking setters...');
 
 new Suite()
@@ -47,6 +52,9 @@ new Suite()
   })
   .add('keypather/set', function () {
     keypatherSet(data, 'content.children[161].children[1].children[5].properties.className[1]', value);
+  })
+  .add('mpath/set', function () {
+    mpath.set('content.children[161].children[1].children[5].properties.className[1]', value, data);
   })
   .on('cycle', function (event) {
     console.log(String(event.target));
