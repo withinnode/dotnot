@@ -1,2 +1,2 @@
-import '~test/get.js';
-import '~test/set.js';
+import './get.js';
+import './set.js';
