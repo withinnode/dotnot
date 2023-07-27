@@ -80,7 +80,7 @@ import { get, set } from 'dotnot';
 // set()
 ```
 
-### get(obj: object, path: string): any
+### get(obj: object, path: string, defaultValue?: any): any
 
 Функция `get` это геттер, который используется для получения значения свойства объекта по пути к этому свойству.
 
@@ -88,10 +88,11 @@ import { get, set } from 'dotnot';
 
   * `obj`: _object_ - Целевой объект
   * `path`: _string_ - Путь к свойству
+  * `defaultValue`: _any_ - Значение, возвращаемое, если запрошенное свойство не установлено
 
 Возвращает:
 
-  * Значение найденного свойства или `undefined`, если свойство не было найдено.
+  * Значение найденного свойства или значение по умолчанию (если передано) или `undefined`, если свойство не было найдено.
 
 ### set(obj: object, path: string, value: any): object
 

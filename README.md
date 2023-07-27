@@ -80,7 +80,7 @@ import { get, set } from 'dotnot';
 // set()
 ```
 
-### get(obj: object, path: string): any
+### get(obj: object, path: string, defaultValue?: any): any
 
 Function `get` is a getter and used to get value of a property of an object by path to that property.
 
@@ -88,10 +88,11 @@ Arguments:
 
   * `obj`: _object_ - Target object
   * `path`: _string_ - Path to property
+  * `defaultValue`: _any_ - Value returned if requested property is not defined
 
 Returns:
 
-  * Value of found property or `undefined` if property was not found.
+  * Value of found property or default value (if provided) or `undefined` if property was not found.
 
 ### set(obj: object, path: string, value: any): object
 

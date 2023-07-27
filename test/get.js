@@ -50,6 +50,10 @@ describe('dotnot/get', () => {
       assert.equal(get(data, 'foo[99]'), undefined);
     });
 
+    it('should return default value for undefined property', () => {
+      assert.equal(get(data, 'foo.not', 'pot'), 'pot');
+    });
+
     it('should throw error for invalid path', () => {
       assert.throws(() => get(data, ']]'));
     });
