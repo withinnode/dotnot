@@ -1,6 +1,6 @@
 {
   "name": "@withinnode/dotnot",
-  "version": "1.0.0",
+  "version": "1.0.0-r",
   "description": "Dot notation getter and setter",
   "type": "module",
   "exports": {
