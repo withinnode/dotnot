@@ -8,7 +8,7 @@ Quick example:
 
 ```js
 // Load library directly from npm into browser
-const { get } = await import('https://unpkg.com/@withinnode/dotnot@1.0.0/lib/index.js');
+const { get } = await import('https://unpkg.com/@withinnode/dotnot@1.0.0-r/lib/index.js');
 
 // Then look for your preferred language
 get(window, 'navigator.languages[0]'); // ru
