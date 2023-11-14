@@ -30,7 +30,7 @@ npm install @withinnode/dotnot
 
 ## Usage
 
-DotNot support standard JavaScript [property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax with dots and brackets as well as dot-only notation.
+DotNot supports standard JavaScript [property accessors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax with dots and brackets as well as dot-only notation.
 
 ```js
 // You can import get or set or both
@@ -156,4 +156,4 @@ The library's code is manually crafted with a focus on performance when executin
 
 ## License
 
-This software is distirbuted under the [MIT license](LICENSE) and free for use in private or commercial projects.
+This software is distributed under the [MIT license](LICENSE) and free for use in private or commercial projects.
