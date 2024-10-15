@@ -8,7 +8,7 @@ RU | [EN](README.md)
 
 ```js
 // Подключаем библиотеку удобным способом
-const { get } = await import('https://unpkg.com/@withinnode/dotnot@1.0.0-r/lib/index.js');
+const { get } = await import('https://unpkg.com/@withinnode/dotnot@1.0.1/lib/index.js');
 
 // Получаем значение приоритетного языка браузера
 get(window, 'navigator.languages[0]'); // ru

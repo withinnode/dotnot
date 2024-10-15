@@ -54,3 +54,5 @@ new Suite()
     console.log('Fastest is ' + this.filter('fastest').map('name'));
   })
   .run();
+
+process.stdout.write('\n');

@@ -1,6 +1,6 @@
 {
   "name": "@withinnode/dotnot",
-  "version": "1.0.0-r",
+  "version": "1.0.1",
   "description": "Dot notation getter and setter",
   "type": "module",
   "exports": {
@@ -9,11 +9,11 @@
     "require": "./lib/index.cjs"
   },
   "scripts": {
-    "lint": "eslint lib/ test/ bench/",
-    "test": "node --test test/index.js",
-    "coverage": "c8 --reporter=text npm test",
-    "bench": "node bench/get.js; echo; node bench/set.js",
-    "postinstall": "patch-package"
+    "lint": "eslint lib/ test/ bench/ scripts/",
+    "test": "node --test",
+    "coverage": "node --test --experimental-test-coverage",
+    "bench": "node scripts/bench.js",
+    "postinstall": "node scripts/postinstall.js"
   },
   "repository": {
     "type": "git",
@@ -21,15 +21,14 @@
   },
   "devDependencies": {
     "benchmark": "^2.1.4",
-    "c8": "^8.0.0",
-    "dot-object": "^2.1.4",
-    "dot-prop": "^8.0.2",
-    "eslint": "^8.45.0",
+    "dot-object": "^2.1.5",
+    "dot-prop": "^9.0.0",
+    "eslint": "^8.57.1",
     "keypather": "^3.1.0",
     "lodash.get": "^4.4.2",
     "lodash.set": "^4.3.2",
     "mpath": "^0.9.0",
-    "patch-package": "^7.0.2",
+    "patch-package": "^8.0.0",
     "resolve-dotstringkey": "^1.1.1"
   }
 }
